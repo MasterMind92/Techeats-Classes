@@ -95,7 +95,7 @@ class Consommable
      * @param  array data
      * @return Boolean
      */
-    public function add_cons($data)
+    public function add_cons(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -113,7 +113,7 @@ class Consommable
      * @param  array data
      * @return Boolean
      */
-    public function modif_cons($data)
+    public function modif_cons(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -131,7 +131,7 @@ class Consommable
      * @param  lib_cons
      * @return Consommable
      */
-    public function search_cons($lib_cons)
+    public function search_cons(PDO $conx,$lib_cons)
     {
         $returnValue = null;
 
@@ -149,7 +149,7 @@ class Consommable
      * @param  array data
      * @return Boolean
      */
-    public function delete_cons($data)
+    public function delete_cons(PDO $conx,$data)
     {
         $returnValue = null;
 

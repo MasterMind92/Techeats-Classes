@@ -99,7 +99,7 @@ class Livreur
      * @param  array data
      * @return Boolean
      */
-    public function add_liv($data)
+    public function add_liv(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -117,7 +117,7 @@ class Livreur
      * @param  String nom_emp
      * @return Livreur
      */
-    public function search_liv( String $nom_emp)
+    public function search_liv(PDO $conx, String $nom_emp)
     {
         $returnValue = null;
 
@@ -135,7 +135,7 @@ class Livreur
      * @param  array data
      * @return Boolean
      */
-    public function modif_liv($data)
+    public function modif_liv(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -153,7 +153,7 @@ class Livreur
      * @param  String nom_emp
      * @return Boolean
      */
-    public function delete_liv( String $nom_emp)
+    public function delete_liv(PDO $conx, String $nom_emp)
     {
         $returnValue = null;
 

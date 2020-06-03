@@ -87,7 +87,7 @@ class Menu
      * @param  array data
      * @return mixed
      */
-    public function delete_menu($data)
+    public function delete_menu(PDO $conx, $data)
     {
         // section -64--88-8-103-725ea17d:17217e72264:-8000:0000000000000B85 begin
         // section -64--88-8-103-725ea17d:17217e72264:-8000:0000000000000B85 end
@@ -101,7 +101,7 @@ class Menu
      * @param  array data
      * @return array
      */
-    public function add_menu($data)
+    public function add_menu(PDO $conx, $data)
     {
         $returnValue = array();
 
@@ -119,7 +119,7 @@ class Menu
      * @param  array data
      * @return Boolean
      */
-    public function modif_menu($data)
+    public function modif_menu(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -137,7 +137,7 @@ class Menu
      * @param  String lib_menu
      * @return mixed
      */
-    public function search_menu( String $lib_menu)
+    public function search_menu(PDO $conx, String $lib_menu)
     {
         // section -64--88-8-103-725ea17d:17217e72264:-8000:0000000000000B9C begin
         // section -64--88-8-103-725ea17d:17217e72264:-8000:0000000000000B9C end

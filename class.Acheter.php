@@ -90,7 +90,7 @@ class Acheter
      * @param  Date date
      * @return mixed
      */
-    public function add_ach( Client $obj_client,  Livreur $obj_liv, $tab_obj_cons,  Date $date)
+    public function add_ach(PDO $conx, Client $obj_client,  Livreur $obj_liv, $tab_obj_cons,  Date $date)
     {
         // section -64--88-56-1-530ab1a6:1720ae78e2d:-8000:0000000000000B44 begin
         // section -64--88-56-1-530ab1a6:1720ae78e2d:-8000:0000000000000B44 end
@@ -105,7 +105,7 @@ class Acheter
      * @param  array tab_obj_cons
      * @return Boolean
      */
-    public function modif_ach( Client $obj_client, $tab_obj_cons)
+    public function modif_ach(PDO $conx, Client $obj_client, $tab_obj_cons)
     {
         $returnValue = null;
 
@@ -124,7 +124,7 @@ class Acheter
      * @param  Date date
      * @return Boolean
      */
-    public function delete_ach( Client $obj_client,  Date $date)
+    public function delete_ach(PDO $conx, Client $obj_client,  Date $date)
     {
         $returnValue = null;
 
@@ -143,7 +143,7 @@ class Acheter
      * @param  Date date
      * @return array
      */
-    public function search_ach( String $nom_client,  Date $date)
+    public function search_ach(PDO $conx, String $nom_client,  Date $date)
     {
         $returnValue = array();
 

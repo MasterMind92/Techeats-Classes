@@ -93,7 +93,7 @@ Trait Utilisateur
      * @param  array data
      * @return Boolean
      */
-    public function add_user($data)
+    public function add_user(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -111,7 +111,7 @@ Trait Utilisateur
      * @param  array data
      * @return Boolean
      */
-    public function modif_user($data)
+    public function modif_user(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -130,7 +130,7 @@ Trait Utilisateur
      * @param  String email
      * @return Utilisateur
      */
-    public function search_user( String $login,  String $email)
+    public function search_user(PDO $conx, String $login,  String $email)
     {
         $returnValue = null;
 
@@ -147,7 +147,7 @@ Trait Utilisateur
      * @author firstname and lastname of author, <author@example.org>
      * @return Boolean
      */
-    public function delete_user()
+    public function delete_user(PDO $conx, String $nom_emp)
     {
         $returnValue = null;
 

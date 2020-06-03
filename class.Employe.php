@@ -86,11 +86,23 @@ Trait Employe
      * @param  String data
      * @return Boolean
      */
-    public function add_emp( String $data)
+    public function add_emp(PDO $conx, String $data)
     {
         $returnValue = null;
 
         // section -64--88-56-1-530ab1a6:1720ae78e2d:-8000:0000000000000AF6 begin
+        $sql = "INSERT INTO EMPLOYE VALUES ('\N',:nom_emp,:email_emp,:num_emp)";
+        $sth = $conx->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+        $response=$sth->execute(array(':nom_pers' => $data['nom_pers'],
+            ':num_pers' => $data['num_pers'],
+            ':email_pers' => $data['email_pers']
+            ));
+
+            if($response!= false){
+                echo "requete effectuee avec succes <br>";
+            }else{
+                echo "la Merde !!!";
+            }
         // section -64--88-56-1-530ab1a6:1720ae78e2d:-8000:0000000000000AF6 end
 
         return $returnValue;
@@ -105,7 +117,7 @@ Trait Employe
      * @param  String email_emp
      * @return mixed
      */
-    public function search_emp( String $nom_emp,  String $email_emp)
+    public function search_emp(PDO $conx, String $nom_emp,  String $email_emp)
     {
         // section -64--88-56-1-530ab1a6:1720ae78e2d:-8000:0000000000000AF8 begin
         // section -64--88-56-1-530ab1a6:1720ae78e2d:-8000:0000000000000AF8 end
@@ -119,7 +131,7 @@ Trait Employe
      * @param  array data
      * @return Boolean
      */
-    public function modif_emp($data)
+    public function modif_emp(PDO $conx, $data)
     {
         $returnValue = null;
 
@@ -138,7 +150,7 @@ Trait Employe
      * @param  String email_emp
      * @return Boolean
      */
-    public function delete_emp( String $nom_emp,  String $email_emp)
+    public function delete_emp(PDO $conx, String $nom_emp,  String $email_emp)
     {
         $returnValue = null;
 

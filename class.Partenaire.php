@@ -82,7 +82,7 @@ Trait Partenaire
      * @param  array data
      * @return Boolean
      */
-    public function add_part($data)
+    public function add_part(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -101,7 +101,7 @@ Trait Partenaire
      * @param  String email_part
      * @return Partenaire
      */
-    public function search_part( String $nom_part,  String $email_part)
+    public function search_part(PDO $conx, String $nom_part,  String $email_part)
     {
         $returnValue = null;
 
@@ -120,7 +120,7 @@ Trait Partenaire
      * @param  String nom_part
      * @return Boolean
      */
-    public function modif_part( String $email_part,  String $nom_part)
+    public function modif_part( PDO $conx,String $email_part,  String $nom_part)
     {
         $returnValue = null;
 
@@ -139,7 +139,7 @@ Trait Partenaire
      * @param  String email_part
      * @return Boolean
      */
-    public function delete_part( String $nom_part,  String $email_part)
+    public function delete_part(PDO $conx, String $nom_part,  String $email_part)
     {
         $returnValue = null;
 

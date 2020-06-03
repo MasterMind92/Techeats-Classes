@@ -96,7 +96,7 @@ class Restaurant
      * @param  array data
      * @return Boolean
      */
-    public function add_rest($data)
+    public function add_rest(PDO $conx,$data)
     {
         $returnValue = null;
 
@@ -114,7 +114,7 @@ class Restaurant
      * @param  String lib_rest
      * @return Restaurant
      */
-    public function search_rest( String $lib_rest)
+    public function search_rest(PDO $conx, String $lib_rest)
     {
         $returnValue = null;
 
@@ -132,7 +132,7 @@ class Restaurant
      * @param  String lib_rest
      * @return Boolean
      */
-    public function modif_rest( String $lib_rest)
+    public function modif_rest(PDO $conx, String $lib_rest)
     {
         $returnValue = null;
 
@@ -150,7 +150,7 @@ class Restaurant
      * @param  String lib_rest
      * @return Boolean
      */
-    public function delete_rest( String $lib_rest)
+    public function delete_rest(PDO $conx, String $lib_rest)
     {
         $returnValue = null;
 

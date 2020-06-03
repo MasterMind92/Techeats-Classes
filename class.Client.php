@@ -63,6 +63,7 @@ require_once('class.acheter_m.php');
  */
 class Client
 {
+    use Utilisateur;
     // --- ASSOCIATIONS ---
     // generateAssociationEnd :     // generateAssociationEnd : 
 

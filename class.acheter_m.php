@@ -90,7 +90,7 @@ class acheter_m
      * @param  Date date
      * @return mixed
      */
-    public function add_ach_m( Client $obj_clt,  Livreur $obj_liv, $obj_menu,  Date $date)
+    public function add_ach_m(PDO $conx, Client $obj_clt,  Livreur $obj_liv, $obj_menu,  Date $date)
     {
         // section -64--88-8-103-725ea17d:17217e72264:-8000:0000000000000B79 begin
         // section -64--88-8-103-725ea17d:17217e72264:-8000:0000000000000B79 end
@@ -105,7 +105,7 @@ class acheter_m
      * @param  array obj_tab_menu
      * @return Boolean
      */
-    public function modif_ach_m( Client $obj_client, $obj_tab_menu)
+    public function modif_ach_m(PDO $conx, Client $obj_client, $obj_tab_menu)
     {
         $returnValue = null;
 
@@ -143,7 +143,7 @@ class acheter_m
      * @param  Date date
      * @return array
      */
-    public function search_ach_m( Client $obj_clt,  Date $date)
+    public function search_ach_m(PDO $conx, Client $obj_clt,  Date $date)
     {
         $returnValue = array();
 
